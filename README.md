@@ -21,24 +21,24 @@ Litefeed is designed for low resource and no bloat access to Instagram user info
 7. *Check Request Headers*: Click on the request and confirm that the headers include your search term.
 
 
-*Example Request Headers*: 
-- for Search:
+*Example Request Headers*:   
+- for Search:  
+```json
+{"data":{"context":"blended","include_reel":"true","query":"apple","rank_token":"","search_surface":"web_top_search"},"hasQuery":true}
+```  
+- for Profile:  
   
-`{"data":{"context":"blended","include_reel":"true","query":"apple","rank_token":"","search_surface":"web_top_search"},"hasQuery":true}`
-
-- for Profile:
-  
-`{"id":"apple","render_surface":"PROFILE"}` 
+```json
+{"id":"apple","render_surface":"PROFILE"}
+```  
 
 
 8. Copy as cURL: Use the "Copy as cURL" option and convert it to Go HTTP requests at curlconverter.com
 9. Format Data Strings: In your Go code, format the data strings for search and profile:
 
-`data = strings.NewReader(\.....\ + query + \.....\) // for search`
-
-`data = strings.NewReader(\.....\ + id + \.....\) // for profile`
-
-here, interpret \ as ` backtick
+`data = strings.NewReader(\.....\ + query + \.....\) // for search`  
+`data = strings.NewReader(\.....\ + id + \.....\) // for profile`  
+here, interpret \ as ` backtick  
 
 # Usage:
 Once the setup is complete, run the application with:
