@@ -34,9 +34,9 @@ Litefeed is designed for low resource and no bloat access to Instagram user info
 8. Copy as cURL: Use the "Copy as cURL" option and convert it to Go HTTP requests at curlconverter.com
 9. Format Data Strings: In your Go code, format the data strings for search and profile:
 
-    data = strings.NewReader(`.....` + query + `.....`) // for search
-    data = strings.NewReader(`.....` + id + `.....`) // for profile
-   
+  data = strings.NewReader(`.....` + query + `.....`) // for search
+  data = strings.NewReader(`.....` + id + `.....`) // for profile
+
 
 # Usage:
 Once the setup is complete, run the application with:
