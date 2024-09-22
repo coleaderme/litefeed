@@ -1,0 +1,11 @@
+<div class="grid">
+    {{range .}}
+    <div class="user">
+        <img class="profile-pic" src="{{ .ProfilePicURL }}" alt="{{ .Username }}" loading="lazy">
+        <div class="user-info">
+            <span hx-get="/profile?id={{.ID}}" hx-target=".top" onclick="scrollToTop()" class="username">{{.Username}}</span>
+            <span class="fullname">{{.Fullname}}</span>
+        </div>
+    </div>
+    {{end}}
+</div>

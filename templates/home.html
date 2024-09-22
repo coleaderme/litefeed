@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteFeed 🐹</title>
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="main"> 
+    <h1>{{.Message}}</h1>
+    <div class="nav">
+        <form>
+            <input id="search" name="search" type="text" placeholder="username" required>
+            <button
+            id="get-btn"
+            hx-post="/search"
+            hx-target=".container">Get</button>
+        </form>
+        <button id="tg-btn" onclick="toggle()">hide</button>
+    </div>
+    <div class="top"></div>
+    <div class="container"></div>
+</div>
+</body>
+<script>function scrollToTop(){const topElement=document.querySelector('.top');topElement.scrollIntoView({behavior:'smooth'});}</script>
+<script>function toggle(){const c=document.querySelector('.profile');const b=document.querySelector('#tg-btn');b.innerText = (b.innerText === 'hide') ? 'show' : 'hide';c.style.display = (c.style.display === 'none') ? 'flex' : 'none';}</script>
+<script src="/static/htmx.min.js" defer></script>
+</html>
