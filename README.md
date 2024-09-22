@@ -23,8 +23,11 @@ Litefeed is designed for low resource and no bloat access to Instagram user info
 
 *Example Request Headers*: 
 - for Search:
+  
 `{"data":{"context":"blended","include_reel":"true","query":"apple","rank_token":"","search_surface":"web_top_search"},"hasQuery":true}`
-- for Profile: 
+
+- for Profile:
+  
 `{"id":"apple","render_surface":"PROFILE"}` 
 
 
@@ -33,10 +36,9 @@ Litefeed is designed for low resource and no bloat access to Instagram user info
 
     data = strings.NewReader(`.....` + query + `.....`) // for search
     data = strings.NewReader(`.....` + id + `.....`) // for profile
-    sda
+   
 
 # Usage:
-
 Once the setup is complete, run the application with:
 `$ go run main.go`
 
