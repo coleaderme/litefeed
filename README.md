@@ -35,6 +35,7 @@ Litefeed is designed for low resource and no bloat access to Instagram user info
 9. Format Data Strings: In your Go code, format the data strings for search and profile:
 
 `data = strings.NewReader(\.....\ + query + \.....\) // for search`
+
 `data = strings.NewReader(\.....\ + id + \.....\) // for profile`
 
 here, interpret \ as ` backtick
