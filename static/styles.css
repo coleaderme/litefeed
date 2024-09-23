@@ -1,11 +1,19 @@
 body {
-    font-family: 'Helvetica', Arial, sans-serif;
+    font-family: 'Helvetica', sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f9f9f9;
     
 }
-button {cursor: pointer;}
+button {
+	cursor: pointer;
+    font: 1.1rem / 1.1 Inter, sans-serif;
+    color: lightgray;
+    }
+
+input {
+	font: 1.1rem / 1.1 Inter, sans-serif;    	
+}
 
 #get-btn {display: none;}
 
@@ -32,6 +40,7 @@ button {cursor: pointer;}
 
 h1 {
     text-align: center;
+    color: slategray;
 }
 .nav {
     display: flex;
@@ -71,12 +80,13 @@ h1 {
 
 .username {
     font-weight: bold;
+    font: 1.1rem/1.4 Inter, sans-serif;
     cursor: pointer;
     color: #262626;
 }
 
 .fullname {
-    font-size: 14px;
+    font: 1rem/1.1 Inter, sans-serif;
     color: #8e8e8e;
 }
 
