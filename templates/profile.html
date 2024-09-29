@@ -3,5 +3,6 @@
     <div class="profile-info">
         <span class="username">{{.Username}}</span>
         <span class="fullname">{{.Fullname}}</span>
+        <button id="media-btn" hx-get="/timeline?username={{.Username}}" hx-target=".top">Media</button>
     </div>
 </div>

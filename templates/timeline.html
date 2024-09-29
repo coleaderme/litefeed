@@ -1,0 +1,17 @@
+<div class="timeline">
+    
+    {{range .Media}}
+    <div class="post">
+            
+            {{if .Video}}
+                <video controls> <source src="{{.Video}}" type="video/mp4">Your browser does not support the video tag.</video>
+            {{else}}
+                <img class="post-img" src="{{.Image}}" loading="lazy">
+            {{end}}
+
+        <div class="caption">{{.Caption}}</div>
+    </div>
+    {{end}}
+
+    <button id="next-btn" onclick="scrollToTop()" hx-get="/timeline?endCursor={{.EndCursor}}&username={{.Username}}" hx-target=".top">NextPage</button>
+</div>
