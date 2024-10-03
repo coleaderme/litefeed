@@ -20,11 +20,10 @@
         <button id="tg-btn" onclick="toggle()">hide</button>
     </div>
     <div class="top"></div>
-     <hr> 
     <div class="container"></div>
 </div>
-</body>
 <script>function scrollToTop(){const topElement=document.querySelector('.top');topElement.scrollIntoView({behavior:'smooth'});}</script>
-<script>function toggle(){const c=document.querySelector('.profile');const b=document.querySelector('#tg-btn');b.innerText = (b.innerText === 'hide') ? 'show' : 'hide';c.style.display = (c.style.display === 'none') ? 'flex' : 'none';}</script>
+<script>function toggle(){const t=document.querySelector('.top');const b=document.querySelector('#tg-btn');b.innerText = (b.innerText === 'hide') ? 'show' : 'hide';t.style.display = (t.style.display === 'none') ? 'flex' : 'none';}</script>
 <script src="/static/htmx.min.js" defer></script>
+</body>
 </html>

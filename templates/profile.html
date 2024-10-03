@@ -1,8 +1,13 @@
 <div class="profile">
     <img src="{{.URL}}" alt="{{.Username}}" class="profile-pic-hd">
     <div class="profile-info">
-        <span class="username">{{.Username}}</span>
+        {{if .IsVerified}}
+            <span class="username">☑️{{.Username}}</span>
+        {{else}}
+            <span class="username">{{.Username}}</span>
+        {{end}}
         <span class="fullname">{{.Fullname}}</span>
+        <span class="biography">{{.Biography}}</span>
         <button id="media-btn" hx-get="/timeline?username={{.Username}}" hx-target=".top">Media</button>
     </div>
 </div>
