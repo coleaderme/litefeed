@@ -1,36 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Helvetica', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
     
 }
-button {
-	cursor: pointer;
-    font: 1.1rem / 1.1 Inter, sans-serif;
-    color: lightgray;
-    }
+
 
 input {
-	font: 1.1rem / 1.1 Inter, sans-serif;    	
+	font: 1.1rem / 1.1 Inter, sans-serif;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 #get-btn {display: none;}
-
-#tg-btn, input {
-    align-items: center;
-    background-color: #fff;
-    border-radius: 8px;
+#media-btn, #next-btn {
+    background-color: seagreen;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
     border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    margin-bottom: 20px;
+}
+#tg-btn {
+    background-color: steelblue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.post-img {
+    width: 100%;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-content: center;
 }
+
 .top {
     display: flex;
     flex-direction: column;
@@ -41,6 +62,10 @@ input {
 h1 {
     text-align: center;
     color: slategray;
+    margin-bottom: 10px;
+}
+button {
+    cursor: pointer;
 }
 .nav {
     display: flex;
@@ -48,12 +73,25 @@ h1 {
     gap: 16px;
 }
 
-/* grid.html */
-
-.grid {
-    max-width: 500px;
-    margin: 0 auto;
+/*timeline.html*/
+.post {
+    width: 340px;
+    margin: 20px auto;
+    text-align: center;
 }
+video {
+    width: 100%;
+    height: auto;
+}
+.caption {
+    font-size: 14px;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* grid.html */
+.grid {max-width: 500px;margin: 0 auto;}
 
 .user {
     display: flex;
@@ -106,8 +144,9 @@ h1 {
 .profile-pic-hd {
     width: 100%;
     max-width: 600px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-radius: 0.4rem;
+    height: auto;
 }
 
 .profile-info {    
